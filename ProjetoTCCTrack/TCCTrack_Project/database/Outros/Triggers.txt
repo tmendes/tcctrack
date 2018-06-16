@@ -1,0 +1,150 @@
+Triggers tbl_file
+------------------
+
+DELIMITER
+    $$
+CREATE TRIGGER tgr_file_insert AFTER
+INSERT
+ON
+    tbl_file FOR EACH ROW
+BEGIN
+    INSERT
+INTO
+    tbl_history(
+        `id_user`,
+        `table_modified_history`,
+        `dml_history`,
+        `date_time_history`
+    )
+VALUES(
+    NEW.id_user,
+    'tbl_file',
+    'INSERT',
+    NOW()) ;
+END $$
+DELIMITER
+    ;
+------------------------------------
+DELIMITER
+    $$
+CREATE TRIGGER tgr_file_update AFTER
+UPDATE
+ON
+    tbl_file FOR EACH ROW
+BEGIN
+    INSERT
+INTO
+    tbl_history(
+        `id_user`,
+        `table_modified_history`,
+        `dml_history`,
+        `date_time_history`
+    )
+VALUES(
+    NEW.id_user,
+    'tbl_file',
+    'UPDATE',
+    NOW()) ;
+END $$
+DELIMITER
+    ;
+------------------------------------
+DELIMITER
+    $$
+CREATE TRIGGER tgr_file_delete AFTER
+DELETE
+ON
+    tbl_file FOR EACH ROW
+BEGIN
+    INSERT
+INTO
+    tbl_history(
+        `id_user`,
+        `table_modified_history`,
+        `dml_history`,
+        `date_time_history`
+    )
+VALUES(
+    OLD.id_user,
+    'tbl_file',
+    'DELETE',
+    NOW()) ;
+END $$
+DELIMITER
+    ;
+------------------------------------
+
+Triggers tbl_task
+------------------
+
+DELIMITER
+    $$
+CREATE TRIGGER tgr_task_insert AFTER
+INSERT
+ON
+    tbl_task FOR EACH ROW
+BEGIN
+    INSERT
+INTO
+    tbl_history(
+        `id_project`,
+        `table_modified_history`,
+        `dml_history`,
+        `date_time_history`
+    )
+VALUES(
+    NEW.id_project,
+    'tbl_task',
+    'INSERT',
+    NOW()) ;
+END $$
+DELIMITER
+    ;
+------------------------------------
+DELIMITER
+    $$
+CREATE TRIGGER tgr_task_update AFTER
+UPDATE
+ON
+    tbl_task FOR EACH ROW
+BEGIN
+    INSERT
+INTO
+    tbl_history(
+        `id_project`,
+        `table_modified_history`,
+        `dml_history`,
+        `date_time_history`
+    )
+VALUES(
+    NEW.id_project,
+    'tbl_task',
+    'UPDATE',
+    NOW()) ;
+END $$
+DELIMITER
+    ;
+------------------------------------
+DELIMITER
+    $$
+CREATE TRIGGER tgr_task_delete AFTER
+DELETE
+ON
+    tbl_task FOR EACH ROW
+BEGIN
+    INSERT
+INTO
+    tbl_history(
+        `id_project`,
+        `table_modified_history`,
+        `dml_history`,
+        `date_time_history`
+    )
+VALUES(
+    OLD.id_project,
+    'tbl_task',
+    'DELETE',
+    NOW()) ;
+END $$
+DELIMITER
+    ;

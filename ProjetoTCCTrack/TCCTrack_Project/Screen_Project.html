@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="pt/br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>TCCTrack - MyProject</title>
+	
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>  
+
+  	<!-- Adiciona o navbar -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+
+        <a href="#"><span id="icon-logo"><img src="img/icons/Logo.png" alt="Logo" /></span></a>
+    </div>
+    
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+       <ul class="nav navbar-nav">
+	    <li><a href="#"><span id="user-log"><img src="img/icons/User.png" alt="Photo_User" /> UserName</span></a></li>
+        <li><a href="#"><img src="img/icons/MessageNotify.png" alt="Message_Icon" /><span class="badge">5</span></a></li>
+		<li><a href="#"><img src="img/icons/PeopleNotify.png" alt="People_Icon" /><span class="badge">2</span></a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret drop-down-arrow"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Perfil</a></li>
+            <li><a href="#">Sair</a></li>
+          </ul>
+        </li>
+       </ul>
+    </div>
+
+  </div>          
+</nav> 
+	
+	<div class="jumbotron jumbotron-image">
+		<div class="orange-panel"></div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+      
+			<div class="col-md-4">
+				<div id="project-image-container">
+					<img src="img/other/ProjectImage.png" alt="Project_Image" id="project-image" />
+				</div>
+
+				<div class="well well-sm" id="datas-project">
+					<div>
+						<h4 data-toggle="collapse" data-target="#status-data"><span class="glyphicon glyphicon-wrench"></span> Status do Projeto</h4>
+						<div class="delimiter"></div>
+						<div id="status-data" class="collapse">
+						<p class="font-color">
+						Em desenvolvimento contínuo.
+						</p>
+						</div>
+					</div>
+					<div>
+						<h4 data-toggle="collapse" data-target="#demo"><span class="glyphicon glyphicon-pencil"></span> Descrição do Projeto</h4>
+						<div class="delimiter"></div>
+						<div id="demo" class="collapse">
+						<p class="font-color">
+						Desenvolvimento de site com recursos de gamefication para maior integração etre os alunos da ETEC
+						</p class="font-color">
+						</div>
+					</div>
+					<div>
+						<h4 data-toggle="collapse" data-target="#demoa"><span class="glyphicon glyphicon-dashboard"></span> Datas</h4>
+						<div class="delimiter"></div>
+						<div id="demoa" class="collapse">
+						<p class="font-color">
+						Início: 02/02/2018
+						<br />
+						Término: 12/12/2018
+						</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-8">
+				<div id="btn-project-container">
+					<button type="submit" class="btn btn-style">
+		            	<span class="glyphicon glyphicon-user" aria-hidden="true"></span> Meu Perfil
+		            </button>
+					<button type="submit" class="btn btn-style">
+		            	<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar Informações
+		            </button>
+				</div>
+				<div id="members-status">
+					<div id="members-group-container">
+						<p id="project-tittle">Gamefication no Site do Alberto</p>
+						<p id="project-members-label">Integrantes:</p>
+						<div class="members-container">
+							<img src="img/people/PersonOne.jpg" title="Guilherme Consolação" alt="User_Photo" class="img-members-style" />
+						</div>
+						<div class="members-container">
+							<img src="img/people/PersonTwo.jpg" title="Anna Laura Assis" alt="User_Photo" class="img-members-style" />
+						</div>
+						<div class="members-container">
+							<img src="img/people/PersonThree.jpg" title="Iago Takeshi" lt="User_Photo" class="img-members-style" />
+						</div>
+						<div class="members-container">
+							<img src="img/people/PersonFour.jpg" title="João Bueno" alt="User_Photo" class="img-members-style" />
+						</div>
+						<div class="members-container">
+							<img src="img/people/PersonFive.jpg" title="Henrique Franzini" alt="User_Photo" class="img-members-style" />
+						</div>
+					</div>
+				</div>
+
+				<div class="well well-sm" id="content-project">
+				<h1>Tarefas</h1>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- Footer -->
+<div class="container-fluid">
+    <footer>
+        <div class="row">
+            <div id="footer">
+                <p id="footer-text">Copyright &copy; Etec Prefeito Alberto Feres 2018</p>
+            </div>
+        </div>
+    </footer>
+</div>	
+
+</body>
+
+</html>

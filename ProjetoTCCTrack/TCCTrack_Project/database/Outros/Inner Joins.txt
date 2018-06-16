@@ -1,0 +1,91 @@
+Inner Joins
+____________
+
+tbl_user_project
+---------------------------------------------
+
+SELECT
+    u.name_user AS 'Nome do Usuário',
+    p.name_project AS 'Projeto Associado',
+    p.desc_project AS 'Descrição do Projeto',
+    p.status_project As 'Status do Projeto'
+FROM
+    tbl_user_project AS up
+INNER JOIN tbl_user AS u
+ON
+    (up.id_user = u.id_user)
+INNER JOIN tbl_project AS p
+ON
+    (up.id_project = p.id_project)
+
+---------------------------------------------
+
+tbl_user_course
+-------------------------------------
+
+SELECT
+    u.name_user AS 'Nome do Usuário',
+    c.name_course AS 'Curso Atual'
+FROM
+    tbl_user_course AS uc
+INNER JOIN tbl_user AS u
+ON
+    (uc.id_user = u.id_user)
+INNER JOIN tbl_course AS c
+ON
+    (uc.id_course = c.id_course)
+
+-------------------------------------
+
+tbl_user_task
+----------------------------------------------
+
+SELECT
+    u.name_user AS 'Nome do Usuário',
+    t.description_task AS 'Tarefa do Usuário',
+    t.status_task AS 'Status da Tarefa'
+FROM
+    tbl_user_task AS ut
+INNER JOIN tbl_user AS u
+ON
+    (ut.id_user = u.id_user)
+INNER JOIN tbl_task AS t
+ON
+    (ut.id_task = t.id_task)
+
+----------------------------------------------
+
+tbl_teacher_project
+------------------------------------------------------
+
+SELECT
+    t.name_teacher AS 'Nome do Professor Coordenador',
+    p.name_project AS 'Projeto',
+    p.description_project AS 'Descrição do Projeto'
+FROM
+    tbl_teacher_project AS tp
+INNER JOIN tbl_teacher AS t
+ON
+    (tp.id_teacher = t.id_teacher)
+INNER JOIN tbl_project AS p
+ON
+    (tp.id_project = p.id_project)
+
+------------------------------------------------------
+
+tbl_task_file
+--------------------------------------------------
+
+SELECT
+    t.description_task AS 'Tarefas Associadas',
+    f.name_file AS 'Upload de Arquivos Realizados'
+FROM
+    tbl_task_file AS tf
+INNER JOIN tbl_task AS t
+ON
+    (tf.id_task = t.id_task)
+INNER JOIN tbl_file AS f
+ON
+    (tf.id_file = f.id_file)
+
+--------------------------------------------------
